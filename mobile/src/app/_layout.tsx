@@ -2,6 +2,7 @@ import { Stack } from "expo-router"
 import { colors } from "@/styles/theme"
 import { useFonts, Rubik_600SemiBold, Rubik_400Regular, Rubik_500Medium, Rubik_700Bold } from "@expo-google-fonts/rubik"
 import { Loading } from "@/components/loading"
+import { GestureHandlerRootView } from "react-native-gesture-handler"
 
 // configs iniciais da navegação, ele olha primeiro esse arq e dps os outros
 export default function Layout(){
@@ -17,13 +18,15 @@ export default function Layout(){
     }
 
     return (
-        <Stack 
-            screenOptions={{ 
-                headerShown: false,
-                contentStyle: {
-                    backgroundColor: colors.gray[100]
-                }
-            }}
-        />
+        <GestureHandlerRootView style={{flex: 1}}>
+            <Stack 
+                screenOptions={{ 
+                    headerShown: false,
+                    contentStyle: {
+                        backgroundColor: colors.gray[100]
+                    }
+                }}
+            />
+        </GestureHandlerRootView>
     )
 }
