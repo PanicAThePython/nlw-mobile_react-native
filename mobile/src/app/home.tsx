@@ -72,7 +72,7 @@ export default function Home(){
     return (
         <View style={{ flex: 1 }}>
             <Categories data={categories} selected={category} onSelect={setCategory}/>
-            {/* <MapView
+            <MapView
                 style={{flex: 1}}
                 initialRegion={{
                     latitude: currentLocation.latitude,
@@ -113,7 +113,7 @@ export default function Home(){
                     ):(<View></View>)
                 }
             </MapView>    
-             */}
+            
             <Places data={markets} />
         </View>
     )
